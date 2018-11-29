@@ -620,7 +620,7 @@ if(command ===`.count`) {
     msg.channel.send(":gear: ``---------`` **Reloading Bot's Process** ``---------`` :gear:")
     
     bot.destroy()
-    bot.login('NTA4MjU1MjY3MzEwNDAzNjA0.DtGcHA.E5q-5p_H0DhyLQQDRM2excdy8zg')
+    bot.login(process.env.token)
   msg.channel.send(":gear: ``---------``**Reload has been done**``---------`` :gear:")
   } else {
     
