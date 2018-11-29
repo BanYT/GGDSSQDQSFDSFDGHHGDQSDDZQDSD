@@ -1,6 +1,6 @@
 Discord = require("discord.js");
 const bot = new Discord.Client();
-const prefix = "";
+let prefix = ".";
 
 bot.on('ready', () => {
 console.log('IM READY !')
@@ -16,7 +16,7 @@ bot.on('message', msg => {
 
   let args = msg.content.split(" ").slice(1);
  
-if (msg.content === prefix + ".help"){
+if(msg.content === `${prefix}help`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -27,24 +27,24 @@ if (msg.content === prefix + ".help"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (command === '.help 2') {
+if(msg.content === `${prefix}help2`){
   msg.reply('')
   var embed = new Discord.RichEmbed()
   .setTitle('**xBot Commands List 2**')
   .addField("**Moderation**","``Moderation : .send / .dm / dm / send === are Commands To Send A Message To The Member You Mentioned To Notify Him For A Dangerous Things Like Hes spam in server etc... [If Ban Got Any Report About A Moderator/owner Of A Server Spamming Hes Members Dms He Will Delete Me From The Current Server So Be Carefull With using This Command ! ]``")
   .addField("**You Can Also Use Some Commands without Typing All of The Command**","``Example>>`` **.p === ping command \ whois/info/i === To See A The User Info \ count === to see how many servers I'm in them ! \ serverinfo/.i sv === to See The Server Info** ")
-  .addField("**.help 3**","**Interesting !?**")
+  .addField("**.help3**","**Interesting !?**")
   .setColor("RANDOM")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (command === '.help 3') {
+if(msg.content === `${prefix}help 3`){
   msg.reply('')
   var embed = new Discord.RichEmbed()
   .setTitle('**xBot Commands List 3**')
@@ -54,28 +54,8 @@ if (command === '.help 3') {
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (command === 'help 2') {
-  msg.reply('')
-  var embed = new Discord.RichEmbed()
-  .setTitle('**xBot Commands List 2**')
-  .addField("**Moderation**","``Moderation : .send / .dm / dm / send === are Commands To Send A Message To The Member You Mentioned To Notify Him For A Dangerous Things Like Hes spam in server etc... [If Ban Got Any Report About A Moderator/owner Of A Server Spamming Hes Members Dms He Will Delete Me From The Current Server So Be Carefull With using This Command ! ]``")
-  .addField("**You Can Also Use Some Commands without Typing All of The Command**","``Example>>`` **.p === ping command \ whois/info/i === To See A The User Info \ count === to see how many servers I'm in them ! \ serverinfo/.i sv === to See The Server Info** ")
-  .addField("**.help 3**","**Interesting !?**")
-  .setColor("RANDOM")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (command === 'help 3') {
-  msg.reply('')
-  var embed = new Discord.RichEmbed()
-  .setTitle('**xBot Commands List 3**')
-  .addField("**Moderation**","``Moderation : .help ban/help ban \.help kick/help kick === are commands to see how to use Kick/ban commands``")
-  .addField('**other Help**','``help ping/.help ping \.help cook/help cook \.help heat/help heat \.help slap/help slap \.help clap/help clap``')
-  .setColor("RANDOM")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help"){
+
+if(msg.content === `${prefix}help`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -86,13 +66,13 @@ if (msg.content === prefix + "help"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".HELP"){
+if(msg.content === `${prefix}HELP`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -103,13 +83,13 @@ if (msg.content === prefix + ".HELP"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".HeLP"){
+if(msg.content === `${prefix}HelP`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -120,13 +100,13 @@ if (msg.content === prefix + ".HeLP"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".HelP"){
+if(msg.content === `${prefix}HeLP`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -137,13 +117,13 @@ if (msg.content === prefix + ".HelP"){
   .addField('**THERE IS ALSO ANTI BAD WORDS BLOCKED**')
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".Help"){
+if(msg.content === `${prefix}Help`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -154,13 +134,13 @@ if (msg.content === prefix + ".Help"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".helP"){
+if(msg.content === `${prefix}heLP`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -171,13 +151,13 @@ if (msg.content === prefix + ".helP"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".HeLp"){
+if(msg.content === `${prefix}Help`){
   var embed = new Discord.RichEmbed()
   .addField("**Greeting**","``Hi and Hello my friend im xBot a funny bot and moderation bot  Here is My commands You Can Also Join The Supoort Server Have A Good Time From xBot`` ", true)
   .setTitle("**xBot Commands**")
@@ -188,13 +168,13 @@ if (msg.content === prefix + ".HeLp"){
   .addField("**Fun Commands**","``avatar , say , info , goodnight , goodmorning , slap , clap , cook , heat , meme , ping , 8ball , count  , ``")
   .addField("**There Are More Commands Like** ``:`` **.set prefix** ``/`` **.set mutedrole** ``/`` **...**")
   .addField("**help**","``You Can Visit Our Support Community https://discord.gg/ax6AzfH`` ", true)
-  .addField("**help 2**"," **Interesting !?**")
+  .addField("**.help2**"," **Interesting !?**")
   .setColor("0x#58FAF4")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + "support"){
+if(msg.content === `${prefix}support`){
   var embed = new Discord.RichEmbed()
   .setTitle("**Need Support ?**")
   .setDescription("**You Can Join The Support Server https://discord.gg/ax6AzfH Or You Can Only say help to see all my commands**")
@@ -203,16 +183,8 @@ if (msg.content === prefix + "support"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".support"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**Need Support ?**")
-  .setDescription("**You Can Join The Support Server https://discord.gg/ax6AzfH Or You Can Only say help to see all my commands**")
-  .setColor("RANDOM")
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "youtube"){
+
+if(msg.content === `${prefix}youtube`){
   var embed = new Discord.RichEmbed()
   .setTitle("**iHaxBan Youtube Channel**")
   .setDescription("**Hi And Welcome Im xBot The Bot Of Ban Need An Awesome Role ? Just Subscribe To Him With This Link And Get @Subscriber role Its Easy Right ? https://www.youtube.com/channel/UC4nzXiKezdyEHgJaBYHrK6Q?view_as=subscriber** **You Can Also Learn How to Code A Bot Like Me By Watching Ban's Videos !**")
@@ -221,7 +193,7 @@ if (msg.content === prefix + "youtube"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + "prefix"){
+if(msg.content === `${prefix}prefix`){
   var embed = new Discord.RichEmbed()
   .setTitle("**xBot Prefix**")
   .setDescription("**My Prefix Is . \ In Some Commands i Don't Have A Prefix You Just Need To Type My Command ! **")
@@ -230,16 +202,7 @@ if (msg.content === prefix + "prefix"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".prefix"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**xBot Prefix**")
-  .setDescription("**My Prefix Is . \ In Some Commands i Don't Have A Prefix You Just Need To Type My Command ! **")
-  .setColor("0x#08088A")
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot ")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "game"){
+if(msg.content === `${prefix}game`){
   var embed = new Discord.RichEmbed()
   .setTitle("**Our Community Games & Events**")
   .setDescription("**Hey Hello ! Welcome Our Community Our Games Are http://starve.io/ - https://www.scrible.com/ - https://www.lordz.io/ - https://moomoo.io/ - there more games ask Ban about them (The Leader and The Owner Of me)**")
@@ -248,7 +211,7 @@ if (msg.content === prefix + "game"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content.startsWith(prefix + "serverinfo")) {
+if(msg.content === `${prefix}serverinfo`){
   let embed = new Discord.RichEmbed()
   .setColor("0x#F605DA")
   .setTitle('**Server Info**')
@@ -261,25 +224,17 @@ if (msg.content.startsWith(prefix + "serverinfo")) {
 msg.channel.send(embed)
 msg.react('👍');
 }
-if (msg.content === prefix + "invite"){
+if(msg.content === `${prefix}invite`){
   var embed = new Discord.RichEmbed()
   .setTitle("**Want To Me In Your Server ? Awesome !**")
-  .setDescription("**You Can Find Me With This Link https://discordapp.com/api/oauth2/authorize?client_id=514713199505833984&permissions=8&scope=bot**")
+  .setDescription("**You Can Find Me With This Link https://discordapp.com/oauth2/authorize?client_id=517276995269296129&permissions=8&scope=bot**")
   .setColor("0x#220A29")
   .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From Ban For Using Hes Bot ")
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".invite"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**Want To Me In Your Server ? Awesome !**")
-  .setDescription("**You Can Find Me With This Link https://discordapp.com/api/oauth2/authorize?client_id=514713199505833984&permissions=8&scope=bot**")
-  .setColor("0x#220A29")
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From Ban For Using Hes Bot ")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content.startsWith(prefix + "i sv")) {
+
+if(msg.content === `${prefix}i sv`){
   let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setTitle('**Server Info**')
@@ -292,7 +247,7 @@ if (msg.content.startsWith(prefix + "i sv")) {
 msg.channel.send(embed)
 msg.react('👍');
 }
-if (msg.content.startsWith(prefix + "i server")) {
+if(msg.content === `${prefix}i server`){
   let embed = new Discord.RichEmbed()
   .setColor('RANDOM')
   .setTitle('**Server Info**')
@@ -305,33 +260,9 @@ if (msg.content.startsWith(prefix + "i server")) {
 msg.channel.send(embed)
 msg.react('👍');
 }
-if (msg.content.startsWith(prefix + ".i sv")) {
-  let embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setTitle('**Server Info**')
-  .addField("Id", msg.guild.id)
-  .addField("Owner", msg.guild.owner)
-  .addField("Owner Id", msg.guild.ownerID)
-  .addField("Roles", msg.guild.roles.size)
-  .addField("Region", msg.guild.region)
-.setThumbnail(msg.guild.iconURL)
-msg.channel.send(embed)
-msg.react('👍');
-}
-if (msg.content.startsWith(prefix + ".i server")) {
-  let embed = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setTitle('**Server Info**')
-  .addField("Id", msg.guild.id)
-  .addField("Owner", msg.guild.owner)
-  .addField("Owner Id", msg.guild.ownerID)
-  .addField("Roles", msg.guild.roles.size)
-  .addField("Region", msg.guild.region)
-.setThumbnail(msg.guild.iconURL)
-msg.channel.send(embed)
-msg.react('👍');
-}
-if (msg.content === prefix + ".help ban"){
+
+
+if(msg.content === `${prefix}help ban`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With Ban Command**")
   .setDescription("**Hi You Need Help With Ban Command ?**")
@@ -341,7 +272,7 @@ if (msg.content === prefix + ".help ban"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help kick"){
+if(msg.content === `${prefix}help kick`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With Kick Command**")
   .setDescription("``Hi You Need Help With Kick Command ?``")
@@ -351,7 +282,7 @@ if (msg.content === prefix + ".help kick"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help slap"){
+if(msg.content === `${prefix}help slap`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With Slap Command**")
   .setDescription("``Hi You Need Help With Kick Command ?``")
@@ -361,7 +292,7 @@ if (msg.content === prefix + ".help slap"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help clap"){
+if(msg.content === `${prefix}help clap`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With Clap Command**")
   .setDescription("``Hi You Need Help With clap Command ?``")
@@ -371,7 +302,7 @@ if (msg.content === prefix + ".help clap"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help heat"){
+if(msg.content === `${prefix}help heat`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With heat Command**")
   .setDescription("``Hi You Need Help With heat Command ?``")
@@ -381,7 +312,7 @@ if (msg.content === prefix + ".help heat"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help cook"){
+if(msg.content === `${prefix}help cook`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With cook Command**")
   .setDescription("``Hi You Need Help With cook Command ?``")
@@ -391,77 +322,7 @@ if (msg.content === prefix + ".help cook"){
   msg.channel.sendEmbed(embed);
   msg.react('👍');
 }
-if (msg.content === prefix + ".help ping"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With ping Command**")
-  .setDescription("``Hi You Need Help With ping Command ?``")
-  .addField("**ping**","**Help With ping Command : ping*** ``OR`` **p** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help ban"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With Ban Command**")
-  .setDescription("**Hi You Need Help With Ban Command ?**")
-  .addField("***BAN***","**Help With Ban Command : ban + @user** ``OR`` **b + @user** ", true)
-  .setColor("0x#37FC07")
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help kick"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With Kick Command**")
-  .setDescription("``Hi You Need Help With Kick Command ?``")
-  .addField("**kick**","**Help With Kick Command : kick + @user*** ``OR`` **k + @user** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help slap"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With Slap Command**")
-  .setDescription("``Hi You Need Help With Kick Command ?``")
-  .addField("**Slap**","**Help With Slap Command : Slap + @user*** ``OR`` **s + @user** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help clap"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With Clap Command**")
-  .setDescription("``Hi You Need Help With clap Command ?``")
-  .addField("**clap**","**Help With clap Command : clap + @user*** ``OR`` **c + @user** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help heat"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With heat Command**")
-  .setDescription("``Hi You Need Help With heat Command ?``")
-  .addField("**heat**","**Help With Heat Command : heat + @user*** ``OR`` **h + @user** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help cook"){
-  var embed = new Discord.RichEmbed()
-  .setTitle("**The Bot Help With cook Command**")
-  .setDescription("``Hi You Need Help With cook Command ?``")
-  .addField("**cook**","**Help With cook Command : cook + @user*** ``OR`` **C + @user** ", true)
-  .setColor('RANDOM')
-  .setFooter("Have A Good Time With Testing And Using my Awesome Commands ! a Special Thanks From  Ban For Using Hes Bot")
-  msg.channel.sendEmbed(embed);
-  msg.react('👍');
-}
-if (msg.content === prefix + "help ping"){
+if(msg.content === `${prefix}help ping`){
   var embed = new Discord.RichEmbed()
   .setTitle("**The Bot Help With ping Command**")
   .setDescription("``Hi You Need Help With ping Command ?``")
@@ -481,28 +342,24 @@ module.exports.run = (bot, message, args) => {
   message.channel.send(botmessage);
   msg.react('👍');
 }
-if (command === 'say') {
+if(msg.content === `${prefix}say`){
   let say = args.join(' '); // space
   msg.delete(); // deletes the content
   if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply('**You Cant Use This Command Because You Dont Have Permissions To use This Command !!!!!**')
   msg.channel.send(say);
 }
 
-if (msg.content === prefix + ".ping"){
+if(msg.content === `${prefix}ping`){
   msg.delete();
   msg.reply("Pong! (hold on, processing latency...)").then(m => m.edit(`${msg.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
 }
-if (msg.content === prefix + "p"){
+if(msg.content === `${prefix}p`){
   msg.delete();
   msg.reply("Pong! (hold on, processing latency...)").then(m => m.edit(`${msg.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
   msg.react('👍');
 }
-if (msg.content === prefix + ".p"){
-  msg.delete();
-  msg.reply("Pong! (hold on, processing latency...)").then(m => m.edit(`${msg.author}:ping_pong: Pong!  (Current latency is ${m.createdTimestamp - msg.createdTimestamp}ms, while the API Latency is ${Math.round(bot.ping)}ms)`) );
-  msg.react("✅");
-}
-if (msg.content === prefix + "gn"){
+
+if(msg.content === `${prefix}gn`){
   var embed = new Discord.RichEmbed()
   .setTitle(":full_moon:")
   .setColor('RANDOM')
@@ -511,7 +368,7 @@ if (msg.content === prefix + "gn"){
   msg.reply("**Good Night Bro Have Sweet Dreams !** :smile:")
   msg.react("✅");
 }
-if (msg.content === prefix + "goodnight"){
+if(msg.content === `${prefix}goodnight`){
   var embed = new Discord.RichEmbed()
   .setTitle(":full_moon:")
   .setColor('RANDOM')
@@ -520,7 +377,7 @@ if (msg.content === prefix + "goodnight"){
   msg.reply("**Good Night Bro Have Sweet Dreams !**:smile:")
   msg.react("✅");
 }
-if (msg.content === prefix + "gm"){
+if(msg.content === `${prefix}gm`){
   var embed = new Discord.RichEmbed()
   .setTitle(":sun_with_face: ")
   .setColor('RANDOM')
@@ -529,7 +386,7 @@ if (msg.content === prefix + "gm"){
   msg.reply("**Good Morning!** :smile:")
   msg.react("✅");
 }
-if (msg.content === prefix + "goodmorning"){
+if(msg.content === `${prefix}goodmorning`){
   var embed = new Discord.RichEmbed()
   .setTitle(":sun_with_face: ")
   .setColor('RANDOM')
@@ -538,44 +395,8 @@ if (msg.content === prefix + "goodmorning"){
   msg.reply("**Good Morning!**:smile:")
   msg.react("✅");
 }
-if (msg.content === prefix + ".gn"){
-  var embed = new Discord.RichEmbed()
-  .setTitle(":full_moon:")
-  .setColor('RANDOM')
-  msg.channel.sendEmbed(embed);
-  msg.delete();
-  msg.reply("**Good Night Bro Have Sweet Dreams !**:smile:")
-  msg.react("✅");
-}
-if (msg.content === prefix + ".goodnight"){
-  var embed = new Discord.RichEmbed()
-  .setTitle(":full_moon:")
-  .setColor('RANDOM')
-  msg.channel.sendEmbed(embed);
-  msg.delete();
-  msg.reply("**Good Night Bro Have Sweet Dreams !** :smile:")
-  msg.react("✅");
-}
-if (msg.content === prefix + ".gm"){
-  var embed = new Discord.RichEmbed()
-  .setTitle(":sun_with_face:")
-  .setColor('RANDOM')
-  msg.channel.sendEmbed(embed);
-  msg.delete();
-  msg.reply("**Good Morning**:smile:")
-  msg.react("✅");
-}
-if (msg.content === prefix + ".goodmorning"){
-  var embed = new Discord.RichEmbed()
-  .setTitle(":sun_with_face: ")
-  .setColor('RANDOM')
-  msg.channel.sendEmbed(embed);
-  msg.delete();
-  msg.reply("**Good Morning ! **:smile:")
-  msg.react("✅");
-}
 
-if (command === '.info') {
+if(msg.content === `${prefix}info`){
   let memberToFind = msg.mentions.members.first();
 
   if (!memberToFind) {
@@ -591,7 +412,7 @@ if (command === '.info') {
   msg.channel.send(embed);
   msg.react("✅");
 }
-if (command === '.i') {
+if(msg.content === `${prefix}i`){
   let memberToFind = msg.mentions.members.first();
 
   if (!memberToFind) {
@@ -611,11 +432,11 @@ CLIENT_ID = '508255267310403604'
 CLIENT_SECRET = 'n-EEiFmX2GhQt9r2F00IffOM7NYPEdK6'
 REDIRECT_URI = 'https://discordapp.com/api/oauth2/authorize?client_id=508255267310403604&permissions=2146958839&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Fapi%2Foauth2%2Fauthorize%3Fclient_id%3D508255267310403604%26permissions%3D2146958839%26redirect_uri%3Dhttps%253A%252F%252Fdiscordapp.com%252Fapi%252Foauth2%252Fauthorize%253Fcli&response_type=code&scope=email%20bot%20messages.read'
 
-if(command ===`.count`) {
+if(msg.content === `${prefix}count`){
   msg.channel.send(`Server counted: **${bot.guilds.size} **`)
   msg.react("✅");
   }
-  if (command === '.reboot') {
+  if(msg.content === `${prefix}reboot`){
   if (msg.author.id === "404950596043669545") {
     msg.channel.send(":gear: ``---------`` **Reloading Bot's Process** ``---------`` :gear:")
     
@@ -628,7 +449,7 @@ if(command ===`.count`) {
   msg.react('⚙');
 }
 } 
-if (command === 'avatar') {
+if(msg.content === `${prefix}avatar`){
   let user = msg.mentions.users.first() || msg.author;
 
   var embed = new Discord.RichEmbed()
@@ -639,18 +460,8 @@ if (command === 'avatar') {
 
   msg.channel.send(embed)
 }
-if (command === '.avatar') {
-  let user = msg.mentions.users.first() || msg.author;
 
-  var embed = new Discord.RichEmbed()
-  .setAuthor(`${user.username}`)
-  .setImage(user.displayAvatarURL)
-  .setColor('RANDOM')
-  msg.react('👍');
-
-  msg.channel.send(embed)
-}
-if(command === '.dm') {
+if(msg.content === `${prefix}dm`){
 
   let dUser = msg.guild.member(msg.mentions.users.first()) || msg.guild.members.get(args[0]);
   if (!dUser) return msg.channel.send("**I Can't Find This User ! You Must Mention Him OR This User Isn't In This Server**")
@@ -663,20 +474,8 @@ if(command === '.dm') {
   msg.author.send(`${msg.author} You Have Sent This Message <<${dMsg}>> To ${dUser}`)
   msg.react('👌');
 }
-if(command === 'dm') {
 
-  let dUser = msg.guild.member(msg.mentions.users.first()) || msg.guild.members.get(args[0]);
-  if (!dUser) return msg.channel.send("**I Can't Find This User ! You Must Mention Him OR This User Isn't In This Server**")
-  if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply("**you cant Use This Command Because You Dont Have One From Those Roles Administrator``\``Owner``\``Moderator OR You Are Missing Administrator Permission**");
-  let dMsg = args.join(" ").slice(22);
-  if(dMsg.length < 1) return msg.reply('You must supply a message!')
-  
-  dUser.send(`${dUser} **This Is Moderator\Administrator\Owner**_${msg.author}_**Sent You A Dm From Hes Server  Read It Carefully : ** >> ${dMsg}`)
-  
-  msg.author.send(`${msg.author} You Have Sent This Message <<${dMsg}>> To ${dUser}`)
-  msg.react('👌');
-}
-if(command === 'send') {
+if(msg.content === `${prefix}send`){
 
   let dUser = msg.guild.member(msg.mentions.users.first()) || msg.guild.members.get(args[0]);
   if (!dUser) return msg.channel.send("**I Can't Find This User ! You Must Mention Him OR This User Isn't In This Server**")
@@ -689,27 +488,15 @@ if(command === 'send') {
   msg.author.send(`${msg.author} You Have Sent This Message <<${dMsg}>> To ${dUser}`)
   msg.react('👌');
 }
-if(command === '.send') {
 
-  let dUser = msg.guild.member(msg.mentions.users.first()) || msg.guild.members.get(args[0]);
-  if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply('**You Cant Use This Command Because You Dont Have Permissions To  Do That !**')
-  if (!dUser) return msg.channel.send("**I Can't Find This User ! You Must Mention Him OR This User Isn't In This Server**")
-  let dMsg = args.join(" ").slice(22);
-  if(dMsg.length < 1) return msg.reply('You must supply a message!')
-  
-  dUser.send(`${dUser} **This Is Moderator\Administrator\Owner**_${msg.author}_**Sent You A Dm From Hes Server  Read It Carefully : ** >> ${dMsg}`)
-  
-  msg.author.send(`${msg.author} You Have Sent This Message <<${dMsg}>> To ${dUser}`)
-  msg.react('👌');
-}
-if (command === '.kick'){
+if(msg.content === `${prefix}kick`){
   var member = msg.mentions.members.first();
   if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply('**You Cant Use This Command Because You Dont Have Permissions To Kick Members !**')
   member.kick();
   msg.reply('**This Member Got Kicked By You For Breaking Rules... He Is gone ....** ``RIP``')
   msg.react('👌');
 }
-if (command === '.ban'){
+if(msg.content === `${prefix}ban`){
   var member = msg.mentions.members.first();
   if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply('**You Cant Use This Command Because You Dont Have Permissions To Ban Members !**')
   if(member.HighestRole.position >= msg.member.HighestRole.position){
@@ -721,7 +508,7 @@ if (command === '.ban'){
 }
   bot.user.setPresence({game: {name: `WATCHING ${bot.guilds.size} SERVERS TYPE .HELP`}, type: 'PLAYING'});
   const ownerID = '404950596043669545';
-  if (command === ".kickbot") {
+  if(msg.content === `${prefix}kickbot`){
     if (msg.author.id !== ownerID) return msg.channel.send("You are not authorized to use this command.");
 
     var error17 = new Discord.RichEmbed().setColor('RANDOM')
@@ -740,7 +527,7 @@ if (command === '.ban'){
     bot.guilds.get(args[0]).leave();
     msg.channel.send(`**Bot was been removed from server id [${args[0]}]**`)
 }
-if (command === 'test') {
+if(msg.content === `${prefix}test`){
   let embed = new Discord.RichEmbed()
   .setTimestamp()
   .setTitle("Direct Message To You")
@@ -752,7 +539,7 @@ if (command === 'test') {
  
   bot.users.get("404950596043669545").send(embed)
 }
-if (command === '.id') {
+if(msg.content === `${prefix}id`){
   msg.channel.send(`${msg.guild.id}`)
 }
 bot.on('message', msg => {
@@ -761,13 +548,8 @@ bot.on('message', msg => {
       msg.delete();
       msg.author.send('``Anti Bad Wors Blocked`` 🍂 **Stop what you are Posting this Action might have been Logged. Stop Saying Bad Words !**');
     }
-});
-if (command === 'test') {
-  let say = args.join('`` ``'); // space
-  msg.delete(); // deletes the content
-  if(!msg.member.permissions.has('ADMINISTRATOR')) return msg.reply('**You Cant Use This Command Because You Dont Have Permissions To use This Command !!!!!**')
-  msg.channel.send(say);
-}
+})
+
 
 });
 
